@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data_given/creditcard.csv
+      md5: e90efcb83d69faf99fcab8b0255024de
+      size: 150828752
+    - path: src/get_data.py
+      md5: 893805df0138d0566948341894035098
+      size: 642
+    - path: src/load_data.py
+      md5: 5fd1cf7e25baa1a6833b2f066094138b
+      size: 622
+    outs:
+    - path: data/raw/creditcard.csv
+      md5: dc31d6eb183be31c3ada5ab12115bdd2
+      size: 151102405
