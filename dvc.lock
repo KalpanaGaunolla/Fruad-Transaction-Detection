@@ -16,3 +16,19 @@ stages:
     - path: data/raw/creditcard.csv
       md5: dc31d6eb183be31c3ada5ab12115bdd2
       size: 151102405
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - path: data/raw/creditcard.csv
+      md5: dc31d6eb183be31c3ada5ab12115bdd2
+      size: 151102405
+    - path: src/split_data.py
+      md5: 1e10322f74074810fcad53fc9dbfa174
+      size: 995
+    outs:
+    - path: data/processed/test_creditcard.csv
+      md5: 3fa75f898b358953865646482786cc5c
+      size: 45330188
+    - path: data/processed/train_creditcard.csv
+      md5: 684832a3ca283e1c5438ea1463df54f9
+      size: 105772339
