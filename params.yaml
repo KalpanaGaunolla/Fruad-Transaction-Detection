@@ -13,32 +13,8 @@ split_data:
   train_path: data/processed/train_creditcard.csv
   test_path: data/processed/test_creditcard.csv
   test_size: 0.3
-
-estimators:
-  IsolationForest:
-    params:
-      # alpha: 0.88
-      # l1_ratio: 0.89
-      n_estimators: 100
-      max_samples: len(x)
-      contamination: outlier_fraction
-      random_state: 1
-      verbose: 0
-  LocalOutlierFactor:
-    params:
-      n_neighbors: 20
-      algorithm: auto
-      leaf_size: 30
-      metric: minkowski
-      p: 2
-      contamination: outlier_fraction
-  SupportVectorMachine:
-    params:
-       kernel: rbf
-       degree: 3
-       gamma: 0.1
-       nu: 0.05
-       max_iter: 1
-       random_state: 1
-
+  
 model_dir: saved_models
+
+reports:
+  scores: reports/scores.json

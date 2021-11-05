@@ -1,0 +1,6 @@
+{
+    "RF accuracy": 0.9993914071369217,
+    "RF clf_report": "              precision    recall  f1-score   support\n\n           0       1.00      1.00      1.00     85307\n           1       0.81      0.80      0.81       136\n\n    accuracy                           1.00     85443\n   macro avg       0.91      0.90      0.90     85443\nweighted avg       1.00      1.00      1.00     85443\n",
+    "RF roc_auc": 0.9005887645245304,
+    "RF outliers": 95
+}
